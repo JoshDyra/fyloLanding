@@ -46,10 +46,7 @@ body {
     color: var(--clr-neutral1); 
 }
 
-
-.wrapper {
-    display: grid;
-}
+/* HEADER & NAV */
 
 nav {
     display: grid;
@@ -57,6 +54,7 @@ nav {
     grid-template-columns: auto auto;
     height: auto !important;
     font-size: 1.2rem;
+    padding: 1rem 0;
 }
 
 .navLinks {
@@ -70,7 +68,7 @@ nav .icon {
     border: none;
 }
 
-nav :is(ul, li, a) {
+:is(ul, li, a) {
     display: block;
     text-decoration: none;
     list-style-type: none;
@@ -83,10 +81,7 @@ li {
     width: 10ch;
 }
 
-
-
 .login {
-    border: .1em solid var(--clr-primary2);
     border-radius: 1em;
     text-align: center;
     background: var(--clr-primary1);
@@ -96,9 +91,102 @@ li {
 .login:hover {
     background: transparent;
     color: var(--clr-primary2);
-    border: .15em solid var(--clr-primary2);
+    border: .1em solid var(--clr-primary2);
+}
+
+a:hover {
+    color: var(--clr-accent1);
 }
 
 .login:active {
-    color: black;
+    color: var(--clr-accent2);
+}
+
+/* BODY */
+
+.split {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 2rem;
+}
+
+.container {
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+}
+
+header, section {
+    padding: 1rem 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+article img {
+    border-radius: 50%;
+}
+
+/* FOOTER */
+
+.footer  {
+    display: block;
+}
+
+
+/* MEDIA QUERIES */
+.divider {
+    background-image: url("../images/bg-curve-mobile.svg");
+    background-size: cover;
+    background-position: top;
+    transform:rotate(180deg);
+    height: 8vh;
+    width: 100%;
+    margin-bottom: -8vh;
+}
+
+.bg-neutral2 {
+    padding-top: 8vh;
+}
+
+@media (min-width: 1200px) {
+    .split {
+        flex-direction: row;
+    }
+
+    .split > * {
+        flex-basis: 100%;
+    }
+
+    .split > * + * {
+        margin-left: 2em;
+    }
+
+    .navLinks, .navLinks li {
+        display: inline-block;
+    }
+
+    .myLinks {
+        display: block;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .divider {
+        background-image: url("../images/bg-curve-desktop.svg");
+        background-size: cover;
+        background-position: top;
+        transform:rotate(180deg);
+        height: 15vh;
+        width: 100%;
+        margin-bottom: -15vh;
+    }
+
+    .bg-neutral2 {
+        padding-top: 15vh;
+    }
+
 }
