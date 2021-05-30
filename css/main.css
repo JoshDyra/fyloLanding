@@ -139,6 +139,37 @@ header, section {
     padding: 1rem 0;
 }
 
+article {
+    margin: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    background: var(--clr-neutral1);
+    border-radius: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+}
+
+article > * {
+    flex-basis: 100%;
+}
+
+article img {
+    border-radius: 50%;
+    float: left;
+    padding: 1rem;
+}
+
+.person {
+    line-height: 1rem;
+}
+
+.person h4 {
+    padding-top: 3rem;
+}
+
+.person h5 {
+}
+
 
 /* IMG, LIST, INPUT styling*/
 img {
