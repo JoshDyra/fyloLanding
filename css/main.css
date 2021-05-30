@@ -46,7 +46,7 @@ body {
     color: var(--clr-neutral1); 
 }
 
-/* HEADER & NAV */
+/* NAV */
 
 nav {
     display: grid;
@@ -108,7 +108,7 @@ h1, h2, h3  {
 
 h1, h2, h3 {
     font-family: var(--font1-700);
-    padding: 2rem 0;
+    padding-bottom: 2rem;
 }
 
 p {
@@ -117,11 +117,52 @@ p {
     padding: 1rem 0;
 }
 
+
+/* BODY */
+
+div form {
+    text-align:center;
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 2rem;
+}
+
+.container {
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+}
+
+header, section {
+    padding: 1rem 0;
+}
+
+
+/* IMG, LIST, INPUT styling*/
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.about a img {
+    display: inline-block;
+}
+
+.about a {
+    display: flex;
+    color: var(--clr-accent2);
+    text-decoration: underline;
+    text-transform: capitalize;
+    text-underline-offset: .5rem;
+    margin: .5rem;
+}
+
 input[type=text], input[type=submit] {
     border-radius: .3rem;
     width: max(50%, 45ch);
     display: inline-block;
-
 }
 
 
@@ -136,36 +177,6 @@ input[type=submit] {
     background: var(--clr-accent1);
     border: none;
     color: var(--clr-neutral1);
-}
-
-/* BODY */
-
-div form {
-    text-align:center;
-}
-
-.split {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 2rem;
-}
-
-.container {
-    margin-inline: auto;
-    width: min(90%, 70.5rem);
-}
-
-header, section {
-    padding: 1rem 0;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-}
-
-article img {
-    border-radius: 50%;
 }
 
 /* FOOTER */
@@ -212,29 +223,13 @@ article img {
         flex-direction: row;
     }
 
-    form {
-        display: flex;
-        flex-direction: row;
-    }
-
-    form > * {
-        flex-basis: 100%;
-    }
-
-    input[type=submit] {
-        padding: .8rem 0;
-        margin: .5rem 1rem;
-        background: var(--clr-accent1);
-        border: none;
-        color: var(--clr-neutral1);
-    }
-
     .split > * {
         flex-basis: 100%;
     }
 
     .split > * + * {
         margin-left: 2em;
+    
     }
 
     .navLinks, .navLinks li {
@@ -259,8 +254,29 @@ article img {
         margin-bottom: -15vh;
     }
 
+    form {
+        display: flex;
+        flex-direction: row;
+    }
+
+    form > * {
+        flex-basis: 100%;
+    }
+
+    input[type=submit] {
+        padding: .8rem 0;
+        margin: .5rem 1rem;
+        background: var(--clr-accent1);
+        border: none;
+        color: var(--clr-neutral1);
+    }
+
+    .bg-neutral1 {
+        flex-direction: row;
+    }
 
     .bg-neutral2 {
+        flex-direction: row;
         padding-top: 15vh;
     }
 
