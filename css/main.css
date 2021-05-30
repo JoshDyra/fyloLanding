@@ -108,7 +108,7 @@ h1, h2, h3  {
 
 h1, h2, h3 {
     font-family: var(--font1-700);
-    padding-bottom: 2rem;
+    padding: 2rem;
 }
 
 p {
@@ -120,14 +120,19 @@ p {
 
 /* BODY */
 
+
 div form {
     text-align:center;
 }
 
 .split {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 3rem 2rem;
+}
+
+.bg-neutral2 {
+    padding-top: 15vh;
 }
 
 .container {
@@ -141,7 +146,7 @@ header, section {
 
 article {
     margin: 2rem;
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     background: var(--clr-neutral1);
@@ -164,12 +169,13 @@ article img {
 }
 
 .person h4 {
-    padding-top: 3rem;
+    padding-top: 1.5rem;
 }
 
-.person h5 {
+.person img {
+    width: 25%;
+    height: 25%;
 }
-
 
 /* IMG, LIST, INPUT styling*/
 img {
@@ -256,6 +262,7 @@ input[type=submit] {
 
     .split > * {
         flex-basis: 100%;
+        padding: 2rem;
     }
 
     .split > * + * {
@@ -302,13 +309,15 @@ input[type=submit] {
         color: var(--clr-neutral1);
     }
 
-    .bg-neutral1 {
-        flex-direction: row;
+    img {
+        display: block;
+        max-width: 150%;
+        overflow: hidden;
     }
 
-    .bg-neutral2 {
-        flex-direction: row;
-        padding-top: 15vh;
+   .bg-neutral2 img {
+       position: relative;
+        top: 20%;
     }
 
 }
