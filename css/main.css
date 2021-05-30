@@ -110,6 +110,14 @@ h1, h2, h3 {
     text-align: center;
 }
 
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
 p {
     font-family: var(--font1-400);
     font-size: 1.2rem;
@@ -252,7 +260,7 @@ input[type=submit]:hover {
 }
 
 .footerLogo {
-    filter: invert(100%) grayscale(100%) brightness(100%);
+    filter: brightness(0) invert(1);
 }
 
 .socialMedia {
