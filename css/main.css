@@ -23,7 +23,7 @@ body {
     --clr-accent2: hsl(170, 45%, 43%);
 
     --clr-neutral1: hsl(240, 75%, 98%);
-    --clr-neutral2: hsl(0, 0%, 75%);
+    --clr-neutral2: hsl(0, 0%, 100%);
 }
 
 .bg-neutral1 { 
@@ -136,10 +136,6 @@ div form {
     display: flex;
     flex-direction: column-reverse;
     padding: 3rem 2rem;
-}
-
-.bg-neutral2 {
-    padding-top: 15vh;
 }
 
 .container {
@@ -276,8 +272,16 @@ input[type=submit]:hover {
 
 /* MEDIA QUERIES */
 
-.bg-neutral2 {
-    padding-top: 8vh;
+.divider {
+    background-image: url('../images/bg-curve-mobile.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 10rem;
+}
+
+.about {
+    margin-top: 3rem;
 }
 
 @media (min-width: 1200px) {
@@ -312,6 +316,14 @@ input[type=submit]:hover {
         flex-basis: 100%;
     }
 
+    .divider {
+        background-image: url('../images/bg-curve-desktop.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 10rem;
+    }
+
 #form2 {
     height: auto;
     margin: auto;
@@ -326,15 +338,9 @@ input[type=submit]:hover {
         color: var(--clr-neutral1);
     }
 
-    img {
-        display: block;
-        max-width: 150%;
-        overflow: hidden;
-    }
-
-   .bg-neutral2 img {
+   .bg-neutral1 img {
        position: relative;
-        top: 20%;
+        top: 6%;
     }
 
     h1, h2, h3  {
@@ -346,4 +352,11 @@ input[type=submit]:hover {
         justify-content:center;
     }
 
+    .columnImage img {
+        max-width: 150%;
+    }
+
+    .about {
+        margin-top: -3rem;
+    }
 }
