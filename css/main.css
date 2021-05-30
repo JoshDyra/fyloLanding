@@ -59,6 +59,7 @@ nav {
 
 .navLinks {
     display: none;
+    cursor:pointer;
 }
 
 nav .icon {
@@ -66,6 +67,7 @@ nav .icon {
     width: 3rem; height: 3rem;
     background: transparent;
     border: none;
+    cursor:pointer;
 }
 
 :is(ul, li, a) {
@@ -102,13 +104,10 @@ a:hover {
     color: var(--clr-accent2);
 }
 
-h1, h2, h3  {
-    text-align: center;
-}
-
 h1, h2, h3 {
     font-family: var(--font1-700);
-    padding: 2rem;
+    padding: 2rem 0;
+    text-align: center;
 }
 
 p {
@@ -172,6 +171,10 @@ article img {
     padding-top: 1.5rem;
 }
 
+.person h5 {
+    font-size: .7rem;
+}
+
 .person img {
     width: 25%;
     height: 25%;
@@ -214,12 +217,21 @@ input[type=submit] {
     background: var(--clr-accent1);
     border: none;
     color: var(--clr-neutral1);
+    transition: ease 300ms all;
+}
+
+input[type=submit]:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+    transition: ease 300ms all;
+    cursor:pointer;
 }
 
 /* FOOTER */
 
-.footer  {
+.footer li  {
     display: block;
+    text-decoration: none;
+    text-transform: capitalize;
 }
 
 .footer .fab {
@@ -234,6 +246,14 @@ input[type=submit] {
     padding-right: 1rem;
 }
 
+.footer {
+    flex-direction: column;
+}
+
+.socialMedia {
+    display: flex;
+    justify-content: center;
+}
 
 /* MEDIA QUERIES */
 .divider {
@@ -270,12 +290,8 @@ input[type=submit] {
     
     }
 
-    .navLinks, .navLinks li {
-        display: inline-block;
-    }
-
-    .myLinks {
-        display: block;
+    .navLinks, .navLinks li, .navLinks ul {
+        display: inline-block !important;
     }
 
     .icon {
@@ -318,6 +334,10 @@ input[type=submit] {
    .bg-neutral2 img {
        position: relative;
         top: 20%;
+    }
+
+    h1, h2, h3  {
+        text-align: left;
     }
 
 }
