@@ -1,5 +1,5 @@
 .attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a { color: hsl(228, 45%, 44%); display: inline;}
 
 *, *::before, *::after {
     margin: 0;
@@ -168,7 +168,7 @@ article img {
 }
 
 .person h4 {
-    padding-top: 1.5rem;
+    padding-top: 2rem;
 }
 
 .person h5 {
@@ -176,7 +176,7 @@ article img {
 }
 
 .person img {
-    width: 25%;
+    width: 6rem;
     height: 25%;
 }
 
@@ -201,7 +201,7 @@ img {
 
 input[type=text], input[type=submit] {
     border-radius: .3rem;
-    width: max(50%, 45ch);
+    width: min(50%,100%);
     display: inline-block;
 }
 
@@ -234,7 +234,7 @@ input[type=submit]:hover {
     text-transform: capitalize;
 }
 
-.footer .fab {
+.fab {
     border-radius: 50%;
     border: .1rem solid var(--clr-neutral1);
     padding: 1rem;
@@ -267,15 +267,6 @@ input[type=submit]:hover {
 }
 
 /* MEDIA QUERIES */
-.divider {
-    background-image: url("../images/bg-curve-mobile.svg");
-    background-size: cover;
-    background-position: top;
-    transform:rotate(180deg);
-    height: 8vh;
-    width: 100%;
-    margin-bottom: -8vh;
-}
 
 .bg-neutral2 {
     padding-top: 8vh;
@@ -304,16 +295,6 @@ input[type=submit]:hover {
         display: none;
     }
 
-    .divider {
-        background-image: url("../images/bg-curve-desktop.svg");
-        background-size: cover;
-        background-position: top;
-        transform:rotate(180deg);
-        height: 15vh;
-        width: 100%;
-        margin-bottom: -15vh;
-    }
-
     form {
         display: flex;
         flex-direction: row;
@@ -323,7 +304,13 @@ input[type=submit]:hover {
         flex-basis: 100%;
     }
 
+#form2 {
+    height: auto;
+    margin: auto;
+}
+
     input[type=submit] {
+        max-width: 30%;
         padding: .8rem 0;
         margin: .5rem 1rem;
         background: var(--clr-accent1);
@@ -344,6 +331,11 @@ input[type=submit]:hover {
 
     h1, h2, h3  {
         text-align: left;
+    }
+
+    footer {
+        display: flex;
+        justify-content:center;
     }
 
 }
