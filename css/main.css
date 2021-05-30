@@ -1,15 +1,20 @@
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font1-400);
 }
 
 :root {
-    --font1-400: font-family: 'Raleway', sans-serif;
-    --font1-700: font-family: 'Raleway', sans-serif;
-    --font2-400: font-family: 'Open Sans', sans-serif;
+    --font1-400: 'Raleway', sans-serif;
+    --font1-700: 'Raleway', sans-serif;
+    --font2-400: 'Open Sans', sans-serif;
 
     --clr-primary1: hsl(243, 87%, 12%);
     --clr-primary2: hsl(238, 22%, 44%);
@@ -21,6 +26,27 @@
     --clr-neutral2: hsl(0, 0%, 75%);
 }
 
+.bg-neutral1 { 
+    background: var(--clr-neutral1); 
+    color: var(--clr-primary1); 
+}
+
+.bg-neutral2 { 
+    background: var(--clr-neutral2); 
+    color: var(--clr-primary1); 
+}
+
+.bg-primary1 { 
+    background: var(--clr-primary1); 
+    color: var(--clr-neutral1); 
+}
+
+.bg-primary2 { 
+    background: var(--clr-primary2);
+    color: var(--clr-neutral1); 
+}
+
+
 .wrapper {
     display: grid;
 }
@@ -30,25 +56,49 @@ nav {
     justify-content: space-around;
     grid-template-columns: auto auto;
     height: auto !important;
-    background: red;
-    align-items: center;
     font-size: 1.2rem;
 }
 
 .navLinks {
     display: none;
-    padding: 2rem 0;
 }
 
 nav .icon {
     font-size: 2rem;
     width: 3rem; height: 3rem;
+    background: transparent;
+    border: none;
 }
 
-:is(ul, li, a) nav {
+nav :is(ul, li, a) {
+    display: block;
     text-decoration: none;
     list-style-type: none;
-    text-transform:uppercase;
-    background: green;
+    text-transform: uppercase;
     padding: .5rem 0;
+    margin: 0;
+}
+
+li {
+    width: 10ch;
+}
+
+
+
+.login {
+    border: .1em solid var(--clr-primary2);
+    border-radius: 1em;
+    text-align: center;
+    background: var(--clr-primary1);
+    color: white;
+}
+
+.login:hover {
+    background: transparent;
+    color: var(--clr-primary2);
+    border: .15em solid var(--clr-primary2);
+}
+
+.login:active {
+    color: black;
 }
