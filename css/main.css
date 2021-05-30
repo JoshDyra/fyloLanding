@@ -239,6 +239,7 @@ input[type=submit]:hover {
     border: .1rem solid var(--clr-neutral1);
     padding: 1rem;
     margin: 0 .5rem;
+    height: 3rem;
 }
 
 .footer img {
@@ -253,6 +254,12 @@ input[type=submit]:hover {
 .socialMedia {
     display: flex;
     justify-content: center;
+    height: auto;
+}
+
+.socialMedia .fab:hover {
+    color: var(--clr-accent2);
+    cursor:pointer;
 }
 
 /* MEDIA QUERIES */
@@ -268,11 +275,6 @@ input[type=submit]:hover {
 
 .bg-neutral2 {
     padding-top: 8vh;
-}
-
-
-@media (max-width: 600px ) {
-
 }
 
 @media (min-width: 1200px) {
