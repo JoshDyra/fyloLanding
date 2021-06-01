@@ -74,7 +74,7 @@ nav .icon {
     display: block;
     text-decoration: none;
     list-style-type: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
     padding: .5rem 0;
     margin: 0;
 }
@@ -152,7 +152,7 @@ article {
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    background: var(--clr-neutral1);
+    background: var(--clr-neutral2);
     border-radius: 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
 }
