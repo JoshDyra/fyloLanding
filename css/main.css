@@ -76,6 +76,10 @@ nav .icon {
     transform: scale(110%);
 }
 
+.icon:hover {
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
 :is(ul, li, a) {
     display: block;
     text-decoration: none;
@@ -242,6 +246,7 @@ input[type=text] {
 }
 
 input[type=submit] {
+    font-weight: bold;
     padding: .8rem 0;
     background: var(--clr-accent1);
     border: none;

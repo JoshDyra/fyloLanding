@@ -2,7 +2,7 @@
 const modalScreen = document.querySelector('.modalPopup');
 const modalBtn = document.querySelector('.modalBtn');
 const modalCloseBtn = document.querySelector('.modalCloseBtn');
-const modal = document.querySelector('.modalPopup');
+const modal = document.querySelector('.modalBox');
 
 //click event listeners on modalBtn & modalCloseBtn
 modalBtn.addEventListener('click', modalPopup);
