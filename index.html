@@ -18,7 +18,6 @@
 </head>
 <body>
 
-
   <nav class="bg-neutral2">
 
     <div class="logo">
@@ -30,7 +29,7 @@
       <ul>
         <li><a href="">Features</a></li>
         <li><a href="">Team</a></li>
-        <li><a href="" class="login">Sign In</a></li>
+        <li> <button class="login modalBtn">Sign In</button></li>
       </ul>
     </div>
     
@@ -46,8 +45,7 @@
           Access them wherever you need, share and collaborate with friends,
           family, and co-workers.
         </p>
-
-          <form action="">
+          <form class="site-form">
             <input type="text" id="email" name="email" placeholder="Enter your email...">
             <input type="submit" value="Get Started">
           </form>
@@ -108,8 +106,8 @@
       </div>
 
       <div id="form2">
-        <form action="">
-          <input type="text" id="email" name="email" placeholder="Email@example.com">
+        <form class="site-form">
+          <input type="text" id="email" name="email" placeholder="Email@example.com" required>
           <input type="submit" value="Get Started For Free">
         </form>
       </div>
@@ -142,7 +140,6 @@
     </section>
   </section>
 
-
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
@@ -150,6 +147,29 @@
     </p>
   </footer>
 
-  <script src="js/navbar.js"></script>
+  <!--MODAL -->
+<div class="modalPopup">
+  <div class="modalBox">
+      <div class="modalCloseBtn">X</div>
+      <div>
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nam ipsa incidunt possimus aut est?</p>
+      </div>
+      <div>
+
+          <form class="modalForm" action="">
+              <label for="fname">First name:</label> 
+              <input type="text" id="fname" name="fname" required>
+              <label for="lname">Last name:</label>
+              <input type="text" id="lname" name="lname" required>
+              <input type="submit" value="Login">
+          </form>
+      </div>
+  </div>
+</div>
+
+  <script defer src="js/navbar.js"></script>
+  <script defer src="js/form.js"></script>
+  <script defer src="js/modal.js"></script>
 </body>
 </html>

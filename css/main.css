@@ -68,6 +68,12 @@ nav .icon {
     background: transparent;
     border: none;
     cursor:pointer;
+    color: var(--clr-primary2);
+}
+
+.icon:hover,
+.icon:focus {
+    transform: scale(110%);
 }
 
 :is(ul, li, a) {
@@ -84,19 +90,26 @@ nav li {
 }
 
 .login {
-    border-radius: 1em;
+    font-size: 1rem;
+    border-radius: 2em;
     text-align: center;
     background: var(--clr-primary1);
     color: white;
+    padding: .5em 2em;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
 }
 
-.login:hover {
+.login:hover,
+.login:focus {
     background: transparent;
     color: var(--clr-primary2);
     border: .1em solid var(--clr-primary2);
 }
 
-a:hover {
+a:hover,
+a:focus {
     color: var(--clr-accent1);
 }
 
@@ -124,11 +137,19 @@ p {
     padding: 1rem 0;
 }
 
+/* ===============
+      FORMS
+   =============== */
+.invalidText {
+    border: 1px dashed red !important;
+    background: rgba(255, 0, 0, 0.05);
+}
+
 
 /* BODY */
 
 
-div form {
+div .site-form {
     text-align:center;
 }
 
@@ -203,12 +224,16 @@ img {
     margin: .5rem;
 }
 
+.about a:hover,
+.about a:focus {
+    color: var(--clr-accent1);
+}
+
 input[type=text], input[type=submit] {
     border-radius: .3rem;
     width: min(50%,100%);
     display: inline-block;
 }
-
 
 input[type=text] {
     padding: .8rem 1rem;
@@ -224,7 +249,8 @@ input[type=submit] {
     transition: ease 300ms all;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover,
+input[type=submit]:focus {
     box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
     transition: ease 300ms all;
     cursor:pointer;
@@ -325,7 +351,6 @@ input[type=submit]:hover {
     }
 
 #form2 {
-    height: auto;
     margin: auto;
 }
 
@@ -358,5 +383,102 @@ input[type=submit]:hover {
 
     .about {
         margin-top: -3rem;
+    }
+}
+
+/*
+ MODAL
+*/
+
+.modalPopup {
+    position: fixed;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    padding-top: 10%;
+    overflow: auto;
+
+    visibility: hidden;
+}
+
+.openModal {
+    visibility: visible;
+    z-index: 10;
+}
+
+.modalPopup .modalBox {
+    position: relative;
+    width: clamp(50%, 50%, 100%);
+    margin: 0 auto;
+    background: var(--clr-neutral2);
+    border-radius: 2rem;
+    padding: 5rem;
+    display: flex;
+    gap: 3rem;
+    z-index: 9;
+
+}
+
+.modalBox > * {
+    flex: 1 1 100%;
+}
+
+.modalBox h2 {
+    padding: 2rem 0;
+    color: var(--clr-primary2);
+}
+
+.modalBox .modalCloseBtn {
+    position: absolute;
+    border-radius: 30%;
+    top: 0; right: 0;
+    font-size: 3rem;
+    padding: 1rem;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+.modalBox form {
+    padding: 1em 0;
+}
+
+.modalBox input[type=text] {
+    width: min(100%, 20em);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    border: .1rem solid var(--clr-primary1);
+    margin:1rem 0;
+    display: block;
+    
+}
+
+.modalBox input[type=text]:active {
+    border: none;
+}
+.modalBox input[type=submit] {
+    width: min(100%, 10em);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    border: none;
+    color: var(--clr-neutral2);
+    background: var(--clr-accent1);
+    margin: .5rem 0;
+}
+
+.modalBox input[type=submit]:hover {
+    color: var(--clr-accent1);
+    background: var(--clr-neutral2);
+    border: 1px var(--clr-accent1) solid;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor:pointer;
+}
+
+.modalForm {
+    display: block;
+}
+
+@media (max-width:900px) {
+    .modalBox {
+        flex-direction: column;
     }
 }
